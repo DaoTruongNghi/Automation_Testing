@@ -4,9 +4,12 @@ import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
-// Press Shift twice to open the Search Everywhere dialog and type `show whitespaces`,
-// then press Enter. You can now see whitespace characters in your code.
+import java.time.Duration;
+
 public class Main {
     public static void main(String[] args) throws InterruptedException {
         // Press Alt+Enter with your caret at the highlighted text to see how
@@ -23,8 +26,10 @@ public class Main {
 
 
         ChromeDriver driver = new ChromeDriver();
+        driver.manage().window().maximize();
         driver.get("https://react-shopping-cart-67954.firebaseapp.com/");
-        Thread.sleep(10000);
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
+
 //        General Element
         WebElement btn_close = driver.findElement(By.xpath("//button[@class=\"sc-1h98xa9-0 gFkyvN\"]"));
 
@@ -34,9 +39,7 @@ public class Main {
         System.out.println(starLink.getText());
         System.out.println(" ");
 
-
-
-
+        
 //      [ADS Top]
 
         WebElement adsTop = driver.findElement(By.xpath("//div[@class=\"sc-joc36b-3 jCptDE\"]"));
@@ -49,8 +52,9 @@ public class Main {
 
         WebElement btnCart = driver.findElement(By.xpath("//button[@class=\"sc-1h98xa9-0 gFkyvN\"]"));
         System.out.println(btnCart.getText());
+        wait.until(ExpectedConditions.visibilityOf(btnCart));
+        wait.until(ExpectedConditions.elementToBeClickable(btnCart));
         btnCart.click();
-        Thread.sleep(1000);
 
         WebElement getText_Div1 = driver.findElement(By.xpath("//div[@class=\"sc-1h98xa9-5 grXYZl\"]/span"));
         WebElement getText_Div2 = driver.findElement(By.xpath("//div[@class=\"sc-7th5t8-0 jehOnP\"]/p"));
@@ -90,7 +94,7 @@ public class Main {
 
 
 
-//      [ATC Click & GetText]
+//      [ATC Click & Text]
 
         System.out.println("PRODUCT 1");
         WebElement P1_getText = driver.findElement(By.xpath("//div[@class=\"sc-124al1g-2 dwOYCh\"]"));
@@ -253,7 +257,7 @@ public class Main {
 //       [Button Cart After Add Products]
         WebElement btnCheckOuts = driver.findElement(By.xpath("//button[@class=\"sc-1h98xa9-11 gnXVNU\"]"));
         btnCheckOuts.click();
-        Thread.sleep(1000);
+//        Thread.sleep(1000);
         String alertTexts = alert.getText();
         System.out.println("Alert text: " + alertTexts);
         System.out.println(" ");
@@ -306,7 +310,5 @@ public class Main {
         Thread.sleep(1000);
         sizeLinkXXL.click();
 
-
-
     }
-    }
+}
