@@ -319,6 +319,7 @@ public class Main {
         wait.until(ExpectedConditions.visibilityOf(btnCart));
         wait.until(ExpectedConditions.elementToBeClickable(btnCart));
         btnCart.click();
+        
         WebElement P1_click_remove = driver.findElement(By.xpath("//p[text()='Cropped Stay Groovy off white']/../../button"));
         WebElement P1_click_more = driver.findElement(By.xpath("//p[text()='Cropped Stay Groovy off white']/../..//button[@class='sc-11uohgb-6 cgtUCJ'][2]"));
         WebElement P1_click_reduce = driver.findElement(By.xpath("//p[text()='Cropped Stay Groovy off white']/../..//button[@class='sc-11uohgb-6 cgtUCJ'][1]"));
