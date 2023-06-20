@@ -99,6 +99,9 @@ public class Main {
         System.out.println("PRODUCT 1");
         WebElement P1_getText = driver.findElement(By.xpath("//div[@class=\"sc-124al1g-2 dwOYCh\"]"));
         WebElement P1_click = driver.findElement(By.xpath("//div[@class=\"sc-124al1g-2 dwOYCh\"]/child::button"));
+//        WebElement P1_click_more = driver.findElement(By.xpath("//p[text()='Cropped Stay Groovy off white']/../..//button[@class='sc-11uohgb-6 cgtUCJ'][1]"));
+//        WebElement P1_click_reduce = driver.findElement(By.xpath("//p[text()='Cropped Stay Groovy off white']/../..//button[@class='sc-11uohgb-6 cgtUCJ'][2]"));
+//        WebElement P1_click_remove = driver.findElement(By.xpath("//p[text()='Cropped Stay Groovy off white']/../../button"));
         System.out.println(P1_getText.getText());
         System.out.println(" ");
         P1_click.click();
@@ -306,9 +309,256 @@ public class Main {
 
         WebElement sizeLinkXXL = driver.findElement(By.xpath("//input[@value='XXL']/../.."));
         System.out.println(sizeLinkXS.getText());
+        System.out.println(" ");
         sizeLinkXXL.click();
         Thread.sleep(1000);
         sizeLinkXXL.click();
 
+//  Button [+, -, x] in Cart
+        // Open befor create WebElement
+        wait.until(ExpectedConditions.visibilityOf(btnCart));
+        wait.until(ExpectedConditions.elementToBeClickable(btnCart));
+        btnCart.click();
+        WebElement P1_click_remove = driver.findElement(By.xpath("//p[text()='Cropped Stay Groovy off white']/../../button"));
+        WebElement P1_click_more = driver.findElement(By.xpath("//p[text()='Cropped Stay Groovy off white']/../..//button[@class='sc-11uohgb-6 cgtUCJ'][2]"));
+        WebElement P1_click_reduce = driver.findElement(By.xpath("//p[text()='Cropped Stay Groovy off white']/../..//button[@class='sc-11uohgb-6 cgtUCJ'][1]"));
+        Thread.sleep(1000);
+        P1_click_more.click();
+        System.out.println("Product 1 In Cart");
+        System.out.println(P1_click_more.getText());
+        wait.until(ExpectedConditions.visibilityOf(P1_click_reduce));
+        wait.until(ExpectedConditions.elementToBeClickable(P1_click_reduce));
+        System.out.println(P1_click_reduce.getText());
+        P1_click_reduce.click();
+//        wait.until(ExpectedConditions.visibilityOf(P1_click_remove));
+//        wait.until(ExpectedConditions.elementToBeClickable(P1_click_remove));
+//        P1_click_remove.click();
+//        Thread.sleep(1000);
+
+        WebElement P2_click_remove = driver.findElement(By.xpath("//p[text()='Basic Cactus White T-shirt']/../../button"));
+        WebElement P2_click_more = driver.findElement(By.xpath("//p[text()='Basic Cactus White T-shirt']/../..//button[@class='sc-11uohgb-6 cgtUCJ'][2]"));
+        WebElement P2_click_reduce = driver.findElement(By.xpath("//p[text()='Basic Cactus White T-shirt']/../..//button[@class='sc-11uohgb-6 cgtUCJ'][1]"));
+        Thread.sleep(1000);
+        P2_click_more.click();
+        System.out.println("Product 2 In Cart");
+        System.out.println(P1_click_more.getText());
+        wait.until(ExpectedConditions.visibilityOf(P2_click_reduce));
+        wait.until(ExpectedConditions.elementToBeClickable(P2_click_reduce));
+        System.out.println(P1_click_reduce.getText());
+        P2_click_reduce.click();
+//        wait.until(ExpectedConditions.visibilityOf(P2_click_remove));
+//        wait.until(ExpectedConditions.elementToBeClickable(P2_click_remove));
+//        P2_click_remove.click();
+
+        WebElement P3_click_remove = driver.findElement(By.xpath("//p[text()='Skater Black Sweatshirt']/../../button"));
+        WebElement P3_click_more = driver.findElement(By.xpath("//p[text()='Skater Black Sweatshirt']/../..//button[@class='sc-11uohgb-6 cgtUCJ'][2]"));
+        WebElement P3_click_reduce = driver.findElement(By.xpath("//p[text()='Skater Black Sweatshirt']/../..//button[@class='sc-11uohgb-6 cgtUCJ'][1]"));
+        Thread.sleep(1000);
+        P3_click_more.click();
+        System.out.println("Product 3 In Cart");
+        System.out.println(P3_click_more.getText());
+        wait.until(ExpectedConditions.visibilityOf(P3_click_reduce));
+        wait.until(ExpectedConditions.elementToBeClickable(P3_click_reduce));
+        System.out.println(P1_click_reduce.getText());
+        P3_click_reduce.click();
+
+        WebElement P4_click_remove = driver.findElement(By.xpath("//p[text()='Black Tule Oversized']/../../button"));
+        WebElement P4_click_more = driver.findElement(By.xpath("//p[text()='Black Tule Oversized']/../..//button[@class='sc-11uohgb-6 cgtUCJ'][2]"));
+        WebElement P4_click_reduce = driver.findElement(By.xpath("//p[text()='Black Tule Oversized']/../..//button[@class='sc-11uohgb-6 cgtUCJ'][1]"));
+        Thread.sleep(1000);
+        P4_click_more.click();
+        System.out.println("Product 4 In Cart");
+        System.out.println(P4_click_more.getText());
+        wait.until(ExpectedConditions.visibilityOf(P4_click_reduce));
+        wait.until(ExpectedConditions.elementToBeClickable(P4_click_reduce));
+        System.out.println(P4_click_reduce.getText());
+        P4_click_reduce.click();
+
+        WebElement P5_click_remove = driver.findElement(By.xpath("//p[text()='Black Batman T-shirt']/../../button"));
+        WebElement P5_click_more = driver.findElement(By.xpath("//p[text()='Black Batman T-shirt']/../..//button[@class='sc-11uohgb-6 cgtUCJ'][2]"));
+        WebElement P5_click_reduce = driver.findElement(By.xpath("//p[text()='Black Batman T-shirt']/../..//button[@class='sc-11uohgb-6 cgtUCJ'][1]"));
+        Thread.sleep(1000);
+        P5_click_more.click();
+        System.out.println("Product 5 In Cart");
+        System.out.println(P5_click_more.getText());
+        wait.until(ExpectedConditions.visibilityOf(P5_click_reduce));
+        wait.until(ExpectedConditions.elementToBeClickable(P5_click_reduce));
+        System.out.println(P5_click_reduce.getText());
+        P5_click_reduce.click();
+
+//        Remove 5 product out cart (1)
+        Thread.sleep(1000);
+        P1_click_remove.click();
+        Thread.sleep(1000);
+        P2_click_remove.click();
+        Thread.sleep(1000);
+        P3_click_remove.click();
+        Thread.sleep(1000);
+        P4_click_remove.click();
+        Thread.sleep(1000);
+        P5_click_remove.click();
+        Thread.sleep(1000);
+
+        WebElement P6_click_remove = driver.findElement(By.xpath("//p[text()='Blue T-Shirt']/../../button"));
+        WebElement P6_click_more = driver.findElement(By.xpath("//p[text()='Blue T-Shirt']/../..//button[@class='sc-11uohgb-6 cgtUCJ'][2]"));
+        WebElement P6_click_reduce = driver.findElement(By.xpath("//p[text()='Blue T-Shirt']/../..//button[@class='sc-11uohgb-6 cgtUCJ'][1]"));
+        Thread.sleep(1000);
+        P6_click_more.click();
+        System.out.println("Product 6 In Cart");
+        System.out.println(P6_click_more.getText());
+        wait.until(ExpectedConditions.visibilityOf(P6_click_reduce));
+        wait.until(ExpectedConditions.elementToBeClickable(P6_click_reduce));
+        System.out.println(P6_click_reduce.getText());
+        P6_click_reduce.click();
+
+        WebElement P7_click_remove = driver.findElement(By.xpath("//p[text()='Loose Black T-shirt']/../../button"));
+        WebElement P7_click_more = driver.findElement(By.xpath("//p[text()='Loose Black T-shirt']/../..//button[@class='sc-11uohgb-6 cgtUCJ'][2]"));
+        WebElement P7_click_reduce = driver.findElement(By.xpath("//p[text()='Loose Black T-shirt']/../..//button[@class='sc-11uohgb-6 cgtUCJ'][1]"));
+        Thread.sleep(1000);
+        P7_click_more.click();
+        System.out.println("Product 7 In Cart");
+        System.out.println(P7_click_more.getText());
+        wait.until(ExpectedConditions.visibilityOf(P7_click_reduce));
+        wait.until(ExpectedConditions.elementToBeClickable(P7_click_reduce));
+        System.out.println(P7_click_reduce.getText());
+        P7_click_reduce.click();
+
+        WebElement P8_click_remove = driver.findElement(By.xpath("//p[text()='Ringer Hall Pass']/../../button"));
+        WebElement P8_click_more = driver.findElement(By.xpath("//p[text()='Ringer Hall Pass']/../..//button[@class='sc-11uohgb-6 cgtUCJ'][2]"));
+        WebElement P8_click_reduce = driver.findElement(By.xpath("//p[text()='Ringer Hall Pass']/../..//button[@class='sc-11uohgb-6 cgtUCJ'][1]"));
+        Thread.sleep(1000);
+        P8_click_more.click();
+        System.out.println("Product 8 In Cart");
+        System.out.println(P8_click_more.getText());
+        wait.until(ExpectedConditions.visibilityOf(P8_click_reduce));
+        wait.until(ExpectedConditions.elementToBeClickable(P8_click_reduce));
+        System.out.println(P8_click_reduce.getText());
+        P8_click_reduce.click();
+
+        WebElement P9_click_remove = driver.findElement(By.xpath("//p[text()='Grey T-shirt']/../../button"));
+        WebElement P9_click_more = driver.findElement(By.xpath("//p[text()='Grey T-shirt']/../..//button[@class='sc-11uohgb-6 cgtUCJ'][2]"));
+        WebElement P9_click_reduce = driver.findElement(By.xpath("//p[text()='Grey T-shirt']/../..//button[@class='sc-11uohgb-6 cgtUCJ'][1]"));
+        Thread.sleep(1000);
+        P9_click_more.click();
+        System.out.println("Product 9 In Cart");
+        System.out.println(P9_click_more.getText());
+        wait.until(ExpectedConditions.visibilityOf(P9_click_reduce));
+        wait.until(ExpectedConditions.elementToBeClickable(P9_click_reduce));
+        System.out.println(P9_click_reduce.getText());
+        P9_click_reduce.click();
+
+        WebElement P10_click_remove = driver.findElement(By.xpath("//p[text()='Black T-shirt with white stripes']/../../button"));
+        WebElement P10_click_more = driver.findElement(By.xpath("//p[text()='Black T-shirt with white stripes']/../..//button[@class='sc-11uohgb-6 cgtUCJ'][2]"));
+        WebElement P10_click_reduce = driver.findElement(By.xpath("//p[text()='Black T-shirt with white stripes']/../..//button[@class='sc-11uohgb-6 cgtUCJ'][1]"));
+        Thread.sleep(1000);
+        P10_click_more.click();
+        System.out.println("Product 10 In Cart");
+        System.out.println(P10_click_more.getText());
+        wait.until(ExpectedConditions.visibilityOf(P10_click_reduce));
+        wait.until(ExpectedConditions.elementToBeClickable(P10_click_reduce));
+        System.out.println(P10_click_reduce.getText());
+        P10_click_reduce.click();
+
+//        Remove 5 product out cart (2)
+        Thread.sleep(1000);
+        P6_click_remove.click();
+        Thread.sleep(1000);
+        P7_click_remove.click();
+        Thread.sleep(1000);
+        P8_click_remove.click();
+        Thread.sleep(1000);
+        P9_click_remove.click();
+        Thread.sleep(1000);
+        P10_click_remove.click();
+        Thread.sleep(1000);
+
+        WebElement P11_click_remove = driver.findElement(By.xpath("//p[text()='Turtles Ninja T-shirt']/../../button"));
+        WebElement P11_click_more = driver.findElement(By.xpath("//p[text()='Turtles Ninja T-shirt']/../..//button[@class='sc-11uohgb-6 cgtUCJ'][2]"));
+        WebElement P11_click_reduce = driver.findElement(By.xpath("//p[text()='Turtles Ninja T-shirt']/../..//button[@class='sc-11uohgb-6 cgtUCJ'][1]"));
+        Thread.sleep(1000);
+        P11_click_more.click();
+        System.out.println("Product 11 In Cart");
+        System.out.println(P11_click_more.getText());
+        wait.until(ExpectedConditions.visibilityOf(P11_click_reduce));
+        wait.until(ExpectedConditions.elementToBeClickable(P11_click_reduce));
+        System.out.println(P11_click_reduce.getText());
+        P11_click_reduce.click();
+
+        WebElement P12_click_remove = driver.findElement(By.xpath("//p[text()='Slim black T-shirt']/../../button"));
+        WebElement P12_click_more = driver.findElement(By.xpath("//p[text()='Slim black T-shirt']/../..//button[@class='sc-11uohgb-6 cgtUCJ'][2]"));
+        WebElement P12_click_reduce = driver.findElement(By.xpath("//p[text()='Slim black T-shirt']/../..//button[@class='sc-11uohgb-6 cgtUCJ'][1]"));
+        Thread.sleep(1000);
+        P12_click_more.click();
+        System.out.println("Product 12 In Cart");
+        System.out.println(P12_click_more.getText());
+        wait.until(ExpectedConditions.visibilityOf(P12_click_reduce));
+        wait.until(ExpectedConditions.elementToBeClickable(P12_click_reduce));
+        System.out.println(P12_click_reduce.getText());
+        P12_click_reduce.click();
+
+        WebElement P13_click_remove = driver.findElement(By.xpath("//p[text()='Blue Sweatshirt']/../../button"));
+        WebElement P13_click_more = driver.findElement(By.xpath("//p[text()='Blue Sweatshirt']/../..//button[@class='sc-11uohgb-6 cgtUCJ'][2]"));
+        WebElement P13_click_reduce = driver.findElement(By.xpath("//p[text()='Blue Sweatshirt']/../..//button[@class='sc-11uohgb-6 cgtUCJ'][1]"));
+        Thread.sleep(1000);
+        P13_click_more.click();
+        System.out.println("Product 13 In Cart");
+        System.out.println(P13_click_more.getText());
+        wait.until(ExpectedConditions.visibilityOf(P13_click_reduce));
+        wait.until(ExpectedConditions.elementToBeClickable(P13_click_reduce));
+        System.out.println(P13_click_reduce.getText());
+        P13_click_reduce.click();
+
+        WebElement P14_click_remove = driver.findElement(By.xpath("//p[text()='White T-shirt Gucci']/../../button"));
+        WebElement P14_click_more = driver.findElement(By.xpath("//p[text()='White T-shirt Gucci']/../..//button[@class='sc-11uohgb-6 cgtUCJ'][2]"));
+        WebElement P14_click_reduce = driver.findElement(By.xpath("//p[text()='White T-shirt Gucci']/../..//button[@class='sc-11uohgb-6 cgtUCJ'][1]"));
+        Thread.sleep(1000);
+        P14_click_more.click();
+        System.out.println("Product 14 In Cart");
+        System.out.println(P14_click_more.getText());
+        wait.until(ExpectedConditions.visibilityOf(P14_click_reduce));
+        wait.until(ExpectedConditions.elementToBeClickable(P14_click_reduce));
+        System.out.println(P14_click_reduce.getText());
+        P14_click_reduce.click();
+
+        WebElement P15_click_remove = driver.findElement(By.xpath("//p[text()='Tropical Wine T-shirt']/../../button"));
+        WebElement P15_click_more = driver.findElement(By.xpath("//p[text()='Tropical Wine T-shirt']/../..//button[@class='sc-11uohgb-6 cgtUCJ'][2]"));
+        WebElement P15_click_reduce = driver.findElement(By.xpath("//p[text()='Tropical Wine T-shirt']/../..//button[@class='sc-11uohgb-6 cgtUCJ'][1]"));
+        Thread.sleep(1000);
+        P15_click_more.click();
+        System.out.println("Product 15 In Cart");
+        System.out.println(P15_click_more.getText());
+        wait.until(ExpectedConditions.visibilityOf(P15_click_reduce));
+        wait.until(ExpectedConditions.elementToBeClickable(P15_click_reduce));
+        System.out.println(P15_click_reduce.getText());
+        P15_click_reduce.click();
+
+//        Remove 5 product out Cart (3)
+        Thread.sleep(1000);
+        P11_click_remove.click();
+        Thread.sleep(1000);
+        P12_click_remove.click();
+        Thread.sleep(1000);
+        P13_click_remove.click();
+        Thread.sleep(1000);
+        P14_click_remove.click();
+        Thread.sleep(1000);
+        P15_click_remove.click();
+        Thread.sleep(1000);
+
+
+        WebElement P16_click_remove = driver.findElement(By.xpath("//p[text()='Marine Blue T-shirt']/../../button"));
+        WebElement P16_click_more = driver.findElement(By.xpath("//p[text()='Marine Blue T-shirt']/../..//button[@class='sc-11uohgb-6 cgtUCJ'][2]"));
+        WebElement P16_click_reduce = driver.findElement(By.xpath("//p[text()='Marine Blue T-shirt']/../..//button[@class='sc-11uohgb-6 cgtUCJ'][1]"));
+        Thread.sleep(1000);
+        P16_click_more.click();
+        System.out.println("Product 16 In Cart");
+        System.out.println(P16_click_more.getText());
+        wait.until(ExpectedConditions.visibilityOf(P16_click_reduce));
+        wait.until(ExpectedConditions.elementToBeClickable(P16_click_reduce));
+        System.out.println(P16_click_reduce.getText());
+        P16_click_reduce.click();
+        Thread.sleep(1000);
+        P16_click_remove.click();
+        btn_close.click();
     }
 }
